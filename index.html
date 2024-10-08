@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenCardPro</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Librería para el efecto typed -->
+</head>
+<body>
+    <div class="contenedor">
+        <div class="generator">
+            <h1>Random Test <span id="card-types"></span> Credit Card Numbers Generator</h1>
+            
+            <div class="form-group">
+              <label for="bin">BIN</label>
+              <input type="text" id="bin" placeholder="414720xxxxxx">
+            </div>
+            
+            <div class="form-group">
+              <label for="month">Expiration Month</label>
+              <select id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">Octuber</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="year">Expiration Year</label>
+              <select id="year">
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+               
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="cvv-length">CVV Length</label>
+                <select id="cvv-length">
+                  <option value="3">3 Digits</option>
+                  <option value="4">4 Digits</option>
+                </select>
+              </div>
+
+            
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" value="1" min="1">
+            </div>
+            
+            <button class="btn" id="generate"><i class="animation"></i>GENERATE<i class="animation"></i>
+            </button>
+            
+            <div id="output"></div>
+          </div>
+    </div>
+
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
