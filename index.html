@@ -10,6 +10,7 @@
     <!-- Slick.js CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -115,18 +116,27 @@
         <div class="col">
           <div class="informacion ">
             <div class="container ">
-              <h3>Acelere su implementación con nuestro generador de números de tarjetas de crédito de última generación</h3>
-             
-              <div class="container ">
-                <h4 class="text-start mt-4" > Quieres Obtener Informacion?</h4>
+              <h3 class="text-start ">Acelere su implementación con nuestro generador de números de tarjetas de crédito de última generación</h3>
+              <div class="container mt-5 d-flex  justify-content-center">
                 <div class="form-group">
-                  <label class="text-start">Correo Electronico</label>
-                  <input type="text"  placeholder="@example.com">
-                  <label class="text-start">Nombre o Apodo</label>
-                  <input type="text"  placeholder="Jon Doe">
-                  <button class="btn" ><i class="animation"></i>CONTACTAR<i class="animation"></i>
+                  <div class="input__container">
+                    <div class="shadow__input"></div>
+                    <button id="contactAlert" class="input__button__shadow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      name="Email"
+                      class="input__search"
+                      placeholder="Enter Email "
+                    />
+                  </div>
+                  <!-- <button class="btn" id="contactAlert"><i class="animation"></i>CONTACTAR<i class="animation"></i>
                   </button>
-                  
+                   -->
+                
                 </div>
 
   

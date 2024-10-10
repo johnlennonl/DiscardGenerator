@@ -79,3 +79,17 @@ const options = {
 };
 
 const typed = new Typed('#card-types', options);
+
+
+//Contacto SweetAlert2 
+
+const contacto = document.getElementById("contactAlert");
+contacto.addEventListener ('click', () => {
+  Swal.fire({
+    title: "Very well done!",
+    text: "Thank you for choosing us!",
+    icon: "success"
+  });
+})
+ 
+
