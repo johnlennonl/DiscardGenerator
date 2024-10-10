@@ -4,78 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenCardPro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilo.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Librería para el efecto typed -->
+    <!-- Slick.js CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="generator">
-            <h1>Random Test <span id="card-types"></span> Credit Card Numbers Generator</h1>
-            
-            <div class="form-group">
-              <label for="bin">BIN</label>
-              <input type="text" id="bin" placeholder="414720xxxxxx">
-            </div>
-            
-            <div class="form-group">
-              <label for="month">Expiration Month</label>
-              <select id="month">
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">Octuber</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="year">Expiration Year</label>
-              <select id="year">
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-                <option value="2028">2028</option>
-                <option value="2029">2029</option>
-                <option value="2030">2030</option>
-                <option value="2031">2031</option>
-                <option value="2032">2032</option>
-                <option value="2033">2033</option>
-                <option value="2034">2034</option>
-                <option value="2035">2035</option>
-               
-              </select>
-            </div>
-            <div class="form-group">
-                <label for="cvv-length">CVV Length</label>
-                <select id="cvv-length">
-                  <option value="3">3 Digits</option>
-                  <option value="4">4 Digits</option>
-                </select>
-              </div>
 
-            
-            <div class="form-group">
-              <label for="quantity">Quantity</label>
-              <input type="number" id="quantity" value="1" min="1">
-            </div>
-            
-            <button class="btn" id="generate"><i class="animation"></i>GENERATE<i class="animation"></i>
-            </button>
-            
-            <div id="output"></div>
-          </div>
+  <div class=" container contenedorAnime mb-5">
+    <div class="credit-card-logos">
+      <div class="logo-slider">
+        <div><img src="https://img.icons8.com/?size=100&id=5L3mKKshbyOf&format=png&color=000000" alt="VISA"></div>
+        <div><img src="https://img.icons8.com/?size=100&id=13610&format=png&color=000000" alt="MasterCard"></div>
+        <div><img src="https://img.icons8.com/?size=100&id=H3EBRSMaDjTC&format=png&color=000000" alt="Discover"></div>
+        <div><img src="https://img.icons8.com/?size=100&id=13607&format=png&color=000000" alt="AMEX"></div>
+        <div><img src="https://img.icons8.com/?size=100&id=20796&format=png&color=000000" alt="Diners Club"></div>
+        <div><img src="https://img.icons8.com/?size=100&id=13609&format=png&color=000000" alt="JCB"></div>
+        <!-- Agrega más logos si lo deseas -->
+      </div>
+    </div>
     </div>
 
+    <div class="container d-flex justify-content-center text-center mb-5 mt-5">
+     <div class="contenedorTitulo">
+      <h1>Random Test <span class="spanIdCard" id="card-types"></span> Credit Card Numbers Generator</h1>
+     </div>
 
+    </div>
+
+    <div class="container mt-5 ">
+      <div class="row">
+        <div class="col">
+          <div class="contenedor">
+            <div class="generator">
+              <div class="form-group">
+                  <label for="bin">BIN</label>
+                  <input type="text" id="bin" placeholder="414720xxxxxx">
+                </div>
+                
+                <div class="form-group">
+                  <label for="month">Expiration Month</label>
+                  <select id="month">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">Octuber</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="year">Expiration Year</label>
+                  <select id="year">
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                   
+                  </select>
+                </div>
+                <div class="form-group">
+                  <div>
+                    <label for="cvv">CVV (opcional):</label>
+                    <input type="text" id="cvv" maxlength="4" placeholder="Ingresa tu CVV">
+                  </div>
+                
+                  <!-- Checkbox para generar automáticamente el CVV -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="autoCvv" checked>
+                    <label class="form-check-label" for="autoCvv">
+                      Generar CVV automáticamente
+                    </label>
+                  </div>
+                </div>
+    
+                
+                <div class="form-group">
+                  <label for="quantity">Quantity</label>
+                  <input type="number" id="quantity" value="1" min="1">
+                </div>
+                
+                <button class="btn" id="generate-card"><i class="animation"></i>GENERATE<i class="animation"></i>
+                </button>
+                
+                <div class="output" id="output"></div>
+    
+    
+              </div>
+              
+        </div>
+        </div>
+        <div class="col">
+          <div class="informacion ">
+            <div class="container ">
+              <h3>Acelere su implementación con nuestro generador de números de tarjetas de crédito de última generación</h3>
+             
+              <div class="container ">
+                <h4 class="text-start mt-4" > Quieres Obtener Informacion?</h4>
+                <div class="form-group">
+                  <label class="text-start">Correo Electronico</label>
+                  <input type="text"  placeholder="@example.com">
+                  <label class="text-start">Nombre o Apodo</label>
+                  <input type="text"  placeholder="Jon Doe">
+                  <button class="btn" ><i class="animation"></i>CONTACTAR<i class="animation"></i>
+                  </button>
+                  
+                </div>
+
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Slick.js JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="scripts/anime.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>
